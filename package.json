@@ -50,7 +50,8 @@
     "docs:serve": "vitepress serve docs",
     "typecheck": "vue-tsc --noEmit",
     "commit": "cz",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepare": "npm run build"
   },
   "release": {
     "branches": [
