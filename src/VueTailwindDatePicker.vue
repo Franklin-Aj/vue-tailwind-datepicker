@@ -1657,5 +1657,4 @@ provide(setToCustomShortcutKey, setToCustomShortcut)
 .vtd-datepicker-overlay.open::before {
   @apply block opacity-50;
 }
-
 </style>
