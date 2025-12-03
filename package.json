@@ -5,17 +5,17 @@
   "description": "A date range picker component for Vue.js 3 using Tailwind CSS",
   "author": {
     "name": "elreco",
-    "email": "alexandre@heypongo.com",
-    "url": "https://github.com/elreco"
+    "email": "franklin.zerosoft@gmail.com",
+    "url": "https://github.com/Franklin-Aj"
   },
   "homepage": "https://vue-tailwind-datepicker.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elreco/vue-tailwind-datepicker.git"
+    "url": "https://github.com/Franklin-Aj/vue-tailwind-datepicker.git"
   },
   "bugs": {
-    "url": "https://github.com/elreco/vue-tailwind-datepicker/issues",
-    "email": "alexandre@heypongo.com"
+    "url": "https://github.com/Franklin-Aj/vue-tailwind-datepicker/issues",
+    "email": "franklin.zerosoft@gmail.com"
   },
   "keywords": [
     "vue-tailwind-datepicker",
