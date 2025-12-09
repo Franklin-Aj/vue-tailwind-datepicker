@@ -1503,6 +1503,11 @@ provide(setToCustomShortcutKey, setToCustomShortcut)
             <div
               class="vtd-datepicker static sm:relative w-full bg-white sm:rounded-lg sm:shadow-sm border-0 sm:border border-black/[.1] px-3 py-3 sm:px-4 sm:py-4 lg:p-6 dark:bg-vtd-secondary-800 dark:border-vtd-secondary-700/[1]"
               :class="getAbsoluteClass(open)">
+              <div @click="close()" class="text-vtd-orange absolute cursor-pointer top-3 right-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 6l12 12M18 6l-12 12"/>
+                </svg>
+              </div>
               <div class="flex flex-wrap lg:flex-nowrap">
                 <VtdShortcut v-if="props.shortcuts" :shortcuts="props.shortcuts" :as-range="asRange()"
                   :as-single="props.asSingle" :i18n="props.options.shortcuts" :close="close" />
@@ -1566,15 +1571,17 @@ provide(setToCustomShortcutKey, setToCustomShortcut)
                       <span>Show Night</span>
                     </label>
                   </div>
-                  <div class="mt-4 sm:flex sm:flex-row-reverse">
-                    <button type="button"
-                      class="mt-3 away-cancel-picker w-full cursor-pointer px-4 py-2 text-vtd-blue bg-white inline-flex justify-center rounded-md border border-vtd-orange text-sm sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" @click="close()" v-text="props.options.footer.cancel" />
+                  <div class="mt-4 sm:flex sm:flex-row-reverse">                    
                     <button type="button"
                       class="away-apply-picker w-full cursor-pointer px-4 py-2 text-vtd-blue bg-white inline-flex justify-center rounded-md border border-vtd-orange text-sm mt-3 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm disabled:cursor-not-allowed"
                       :disabled="props.asSingle
                         ? applyValue.length < 1
                         : applyValue.length < 2
-                        " @click="applyDate(close)" v-text="props.options.footer.apply" />                    
+                        " @click="applyDate(close)" v-text="props.options.footer.apply"></button>                      
+                      <!-- <button type="button"
+                      class="mt-3 away-cancel-picker w-full cursor-pointer px-4 py-2 text-vtd-blue bg-white inline-flex justify-center rounded-md border border-vtd-orange text-sm sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" @click="close()" v-text="props.options.footer.cancel" /> -->
+                      <button type="button"
+                      class="mt-3 away-cancel-picker w-full cursor-pointer px-4 py-2 text-vtd-blue bg-white inline-flex justify-center rounded-md border border-vtd-orange text-sm sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" @click="setToToday()" v-text="'Reset'"></button>
                   </div>
                 </div>
               </div>
